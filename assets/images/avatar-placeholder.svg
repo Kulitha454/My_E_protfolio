@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0e1b38" />
+      <stop offset="50%" stop-color="#14244d" />
+      <stop offset="100%" stop-color="#0a1226" />
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffd875" />
+      <stop offset="50%" stop-color="#d4af37" />
+      <stop offset="100%" stop-color="#aa8214" />
+    </linearGradient>
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#0284c7" />
+    </linearGradient>
+    <radialGradient id="auraGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#d4af37" stop-opacity="0.35" />
+      <stop offset="70%" stop-color="#d4af37" stop-opacity="0.05" />
+      <stop offset="100%" stop-color="#d4af37" stop-opacity="0" />
+    </radialGradient>
+    <filter id="shadowFilter" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <!-- Background Circle & Aura -->
+  <circle cx="200" cy="200" r="190" fill="url(#auraGlow)" />
+  <circle cx="200" cy="200" r="160" fill="url(#bgGrad)" stroke="url(#goldGrad)" stroke-width="3" filter="url(#shadowFilter)" />
+
+  <!-- Decorative Orbit Rings -->
+  <circle cx="200" cy="200" r="175" fill="none" stroke="rgba(212, 175, 55, 0.25)" stroke-width="1.5" stroke-dasharray="8 8" />
+  <circle cx="200" cy="200" r="140" fill="none" stroke="rgba(56, 189, 248, 0.2)" stroke-width="1" />
+
+  <!-- Center Badge Design -->
+  <g transform="translate(200, 160)" text-anchor="middle">
+    <!-- Marketing & Analytics Crest / Monogram -->
+    <polygon points="0,-60 52,-30 52,30 0,60 -52,30 -52,-30" fill="#101d3b" stroke="url(#goldGrad)" stroke-width="2" />
+    <text x="0" y="14" font-family="'Plus Jakarta Sans', -apple-system, sans-serif" font-size="44" font-weight="800" fill="url(#goldGrad)" letter-spacing="2">KH</text>
+  </g>
+
+  <!-- User Silhouette Graphic -->
+  <path d="M 120,315 C 120,260 155,245 200,245 C 245,245 280,260 280,315 Z" fill="#182c58" stroke="url(#goldGrad)" stroke-width="2" />
+  <circle cx="200" cy="225" r="32" fill="#1f376d" stroke="url(#goldGrad)" stroke-width="2" />
+
+  <!-- Floating Tech Tags / Indicators -->
+  <g transform="translate(60, 190)">
+    <rect x="-10" y="-14" width="76" height="28" rx="14" fill="#0d1b3a" stroke="#d4af37" stroke-width="1.5"/>
+    <text x="28" y="4" font-family="sans-serif" font-size="11" font-weight="700" fill="#ffd875" text-anchor="middle">SEO &amp; GEO</text>
+  </g>
+
+  <g transform="translate(270, 190)">
+    <rect x="-10" y="-14" width="82" height="28" rx="14" fill="#0d1b3a" stroke="#38bdf8" stroke-width="1.5"/>
+    <text x="31" y="4" font-family="sans-serif" font-size="11" font-weight="700" fill="#7dd3fc" text-anchor="middle">POWER BI</text>
+  </g>
+
+  <g transform="translate(145, 345)">
+    <rect x="0" y="-12" width="110" height="24" rx="12" fill="#091326" stroke="#d4af37" stroke-width="1"/>
+    <text x="55" y="4" font-family="sans-serif" font-size="10" font-weight="600" fill="#e2e8f0" text-anchor="middle">Photo Placeholder</text>
+  </g>
+</svg>

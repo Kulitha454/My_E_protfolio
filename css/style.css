@@ -1,0 +1,2259 @@
+/* ==========================================================================
+   KULITHA HANSAJA - PERSONAL PORTFOLIO STYLESHEET
+   Design System: Luxury Black & Gold (Dark Default) / White, Gold & Silver (Light)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. CSS Variables & Design Tokens (Dark Theme Default: Black + Gold)
+   -------------------------------------------------------------------------- */
+:root,
+[data-theme="dark"] {
+  /* Surface & Background Spectrum (Deep Black / Onyx) */
+  --bg-base: #0B0C10;
+  --bg-surface: #14161F;
+  --bg-subtle: #1A1D28;
+  --bg-silver: #212534;
+  --bg-alt-section: #0F1017;
+  --bg-nav: rgba(11, 12, 16, 0.94);
+
+  /* Typography Colors (High-Contrast Crisp Light Text) */
+  --text-primary: #F4F4F6;
+  --text-secondary: #A1A1AA;
+  --text-muted: #71717A;
+
+  /* Luxury Satin Gold Spectrum (Rich Gold Accents) */
+  --gold-primary: #D4AF37;
+  --gold-dark: #E5C378;
+  --gold-light: #F3E5AB;
+  --gold-gradient: linear-gradient(135deg, #F3E5AB 0%, #D4AF37 50%, #B38B3F 100%);
+  --gold-gradient-soft: linear-gradient(135deg, rgba(212, 175, 55, 0.14) 0%, rgba(197, 160, 89, 0.04) 100%);
+  --gold-subtle: rgba(212, 175, 55, 0.12);
+  --gold-border: rgba(212, 175, 55, 0.40);
+  --gold-border-light: rgba(212, 175, 55, 0.22);
+
+  /* Brushed Silver & Border Spectrum */
+  --silver-light: #1A1D28;
+  --silver-border: rgba(255, 255, 255, 0.09);
+  --silver-border-strong: rgba(255, 255, 255, 0.18);
+  --silver-metallic: linear-gradient(135deg, #1F2330 0%, #14161F 100%);
+  --silver-accent: #94A3B8;
+
+  /* Subtle Radiance & Ambient Lighting (Gold & Silver Glows) */
+  --radiance-gold: 0 0 35px rgba(212, 175, 55, 0.20), 0 0 10px rgba(212, 175, 55, 0.10);
+  --radiance-gold-hover: 0 0 45px rgba(212, 175, 55, 0.35), 0 4px 20px rgba(212, 175, 55, 0.22);
+  --radiance-silver: 0 0 30px rgba(255, 255, 255, 0.08), 0 0 8px rgba(255, 255, 255, 0.04);
+  --radiance-card: 0 4px 24px rgba(0, 0, 0, 0.5), 0 0 25px rgba(212, 175, 55, 0.07);
+  
+  /* Shadows */
+  --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.4), 0 1px 3px rgba(0, 0, 0, 0.3);
+  --shadow-elevated: 0 12px 36px rgba(0, 0, 0, 0.65), 0 0 30px rgba(212, 175, 55, 0.12);
+
+  /* Background Ambient Radials */
+  --body-radial-1: rgba(212, 175, 55, 0.05);
+  --body-radial-2: rgba(148, 163, 184, 0.04);
+  --body-radial-3: rgba(212, 175, 55, 0.04);
+  --hero-glow: radial-gradient(circle, rgba(212, 175, 55, 0.12) 0%, transparent 70%);
+
+  /* Component Specific Overrides */
+  --control-bg: rgba(26, 29, 40, 0.95);
+  --control-color: #F4F4F6;
+  --lightbox-bg: rgba(5, 6, 9, 0.92);
+
+  /* Typography */
+  --font-heading: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* 8px Spacing Grid */
+  --space-8: 8px;
+  --space-16: 16px;
+  --space-20: 20px;
+  --space-24: 24px;
+  --space-28: 28px;
+  --space-32: 32px;
+  --space-40: 40px;
+  --space-48: 48px;
+  --space-64: 64px;
+  --space-80: 80px;
+  --space-100: 100px;
+  --space-120: 120px;
+
+  /* Radius */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* --------------------------------------------------------------------------
+   Light Theme Variable Set (Preserves Existing Palette Exactly As-Is)
+   -------------------------------------------------------------------------- */
+[data-theme="light"] {
+  /* Surface & Background Spectrum (Original Luxury White) */
+  --bg-base: #FBFBFA;
+  --bg-surface: #FFFFFF;
+  --bg-subtle: #F5F6F8;
+  --bg-silver: #F0F2F5;
+  --bg-alt-section: #FFFFFF;
+  --bg-nav: rgba(255, 255, 255, 0.96);
+
+  /* Typography Colors */
+  --text-primary: #111827;
+  --text-secondary: #4B5563;
+  --text-muted: #6B7280;
+
+  /* Luxury Satin Gold Spectrum */
+  --gold-primary: #C5A059;
+  --gold-dark: #A8833C;
+  --gold-light: #E5C378;
+  --gold-gradient: linear-gradient(135deg, #D4AF37 0%, #C5A059 50%, #B38B3F 100%);
+  --gold-gradient-soft: linear-gradient(135deg, rgba(212, 175, 55, 0.08) 0%, rgba(197, 160, 89, 0.03) 100%);
+  --gold-subtle: rgba(197, 160, 89, 0.08);
+  --gold-border: rgba(197, 160, 89, 0.35);
+  --gold-border-light: rgba(197, 160, 89, 0.2);
+
+  /* Brushed Silver & Platinum Spectrum */
+  --silver-light: #F8FAFC;
+  --silver-border: #E2E8F0;
+  --silver-border-strong: #CBD5E1;
+  --silver-metallic: linear-gradient(135deg, #F8FAFC 0%, #E2E8F0 100%);
+  --silver-accent: #64748B;
+
+  /* Subtle Radiance & Ambient Lighting (Gold & Silver Glows) */
+  --radiance-gold: 0 0 35px rgba(197, 160, 89, 0.12), 0 0 10px rgba(197, 160, 89, 0.06);
+  --radiance-gold-hover: 0 0 45px rgba(197, 160, 89, 0.22), 0 4px 20px rgba(197, 160, 89, 0.15);
+  --radiance-silver: 0 0 30px rgba(203, 213, 225, 0.3), 0 0 8px rgba(226, 232, 240, 0.2);
+  --radiance-card: 0 4px 20px rgba(0, 0, 0, 0.03), 0 0 25px rgba(197, 160, 89, 0.06);
+  
+  /* Shadows */
+  --shadow-card: 0 2px 10px rgba(0, 0, 0, 0.03), 0 1px 3px rgba(0, 0, 0, 0.02);
+  --shadow-elevated: 0 10px 30px rgba(0, 0, 0, 0.05), 0 0 25px rgba(197, 160, 89, 0.08);
+
+  /* Background Ambient Radials */
+  --body-radial-1: rgba(197, 160, 89, 0.03);
+  --body-radial-2: rgba(203, 213, 225, 0.04);
+  --body-radial-3: rgba(197, 160, 89, 0.03);
+  --hero-glow: radial-gradient(circle, rgba(197, 160, 89, 0.08) 0%, transparent 70%);
+
+  /* Component Specific Overrides */
+  --control-bg: rgba(255, 255, 255, 0.95);
+  --control-color: #111827;
+  --lightbox-bg: rgba(17, 24, 39, 0.88);
+}
+
+/* --------------------------------------------------------------------------
+   Smooth Theme Switch Transition (180ms ease)
+   -------------------------------------------------------------------------- */
+html.theme-transition,
+html.theme-transition *,
+html.theme-transition *::before,
+html.theme-transition *::after {
+  transition: background-color 180ms ease, border-color 180ms ease, color 180ms ease, box-shadow 180ms ease !important;
+}
+
+/* --------------------------------------------------------------------------
+   2. Reset & Global Styles
+   -------------------------------------------------------------------------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-base);
+  color: var(--text-primary);
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  background-image: 
+    radial-gradient(circle at 10% 10%, var(--body-radial-1) 0%, transparent 40%),
+    radial-gradient(circle at 90% 40%, var(--body-radial-2) 0%, transparent 45%),
+    radial-gradient(circle at 50% 80%, var(--body-radial-3) 0%, transparent 50%);
+  background-attachment: fixed;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition-fast), border-color var(--transition-fast), background-color var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+button {
+  font-family: inherit;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+/* --------------------------------------------------------------------------
+   3. Typography Hierarchy
+   -------------------------------------------------------------------------- */
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  color: var(--text-primary);
+  line-height: 1.15;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  font-size: 56px;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--gold-dark);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: var(--space-16);
+}
+
+.eyebrow::before {
+  content: '';
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  background: var(--gold-gradient);
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(197, 160, 89, 0.5);
+}
+
+/* --------------------------------------------------------------------------
+   4. Section Containers & Alternating Bands
+   -------------------------------------------------------------------------- */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--space-24);
+  padding-right: var(--space-24);
+}
+
+.section {
+  padding-top: var(--space-100);
+  padding-bottom: var(--space-100);
+  background-color: var(--bg-base);
+  border-bottom: 1px solid var(--silver-border);
+  position: relative;
+}
+
+.section-alt {
+  padding-top: var(--space-100);
+  padding-bottom: var(--space-100);
+  background-color: var(--bg-alt-section);
+  border-bottom: 1px solid var(--silver-border);
+  position: relative;
+}
+
+.section-header {
+  margin-bottom: var(--space-48);
+}
+
+.section-title {
+  margin-bottom: var(--space-12);
+}
+
+.section-desc {
+  font-size: 16px;
+  color: var(--text-secondary);
+  max-width: 640px;
+  line-height: 1.55;
+}
+
+/* --------------------------------------------------------------------------
+   5. Buttons, Badges & Metallic Tags
+   -------------------------------------------------------------------------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-8);
+  padding: 12px 24px;
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* Gold Primary Button with Satin Radiance */
+.btn-gold {
+  background: var(--gold-gradient);
+  color: #FFFFFF;
+  border: 1px solid var(--gold-dark);
+  box-shadow: 0 2px 10px rgba(197, 160, 89, 0.25);
+}
+
+.btn-gold:hover {
+  background: linear-gradient(135deg, #DBB840 0%, #B89246 100%);
+  border-color: var(--gold-dark);
+  color: #FFFFFF;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 20px rgba(197, 160, 89, 0.4);
+}
+
+/* Silver / White Outlined Button with Subtle Radiance */
+.btn-silver {
+  background-color: var(--bg-surface);
+  color: var(--text-primary);
+  border: 1px solid var(--silver-border-strong);
+  box-shadow: var(--shadow-card);
+}
+
+.btn-silver:hover {
+  border-color: var(--gold-primary);
+  color: var(--gold-dark);
+  background-color: var(--bg-surface);
+  transform: translateY(-1px);
+  box-shadow: var(--radiance-gold);
+}
+
+.btn-sm {
+  padding: 8px 16px;
+  font-size: 13px;
+}
+
+/* Outlined Pill Tags */
+.tag-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 14px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-primary);
+  border: 1px solid var(--silver-border-strong);
+  border-radius: var(--radius-full);
+  background-color: var(--bg-surface);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02);
+  transition: all var(--transition-fast);
+}
+
+.tag-pill:hover {
+  border-color: var(--gold-primary);
+  color: var(--gold-dark);
+  background-color: var(--gold-subtle);
+  box-shadow: var(--radiance-gold);
+}
+
+.tech-tag {
+  display: inline-block;
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  border: 1px solid var(--silver-border);
+  border-radius: var(--radius-sm);
+  background-color: var(--bg-silver);
+}
+
+/* --------------------------------------------------------------------------
+   6. Navigation Bar
+   -------------------------------------------------------------------------- */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: var(--bg-nav);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--silver-border);
+  padding-top: var(--space-16);
+  padding-bottom: var(--space-16);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.02);
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-brand {
+  font-family: var(--font-heading);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.nav-brand .brand-dot {
+  width: 7px;
+  height: 7px;
+  background: var(--gold-gradient);
+  border-radius: 50%;
+  box-shadow: 0 0 6px rgba(197, 160, 89, 0.6);
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: var(--space-24);
+  list-style: none;
+}
+
+.nav-link {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  padding: 6px 0;
+  position: relative;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--gold-dark);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--gold-gradient);
+  transition: width var(--transition-fast);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-16);
+}
+
+/* Theme Toggle Button (Sun & Moon) */
+.theme-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-sm);
+  background-color: var(--bg-surface);
+  border: 1px solid var(--silver-border-strong);
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  padding: 0;
+  flex-shrink: 0;
+  box-shadow: var(--shadow-card);
+}
+
+.theme-toggle-btn:hover {
+  border-color: var(--gold-primary);
+  color: var(--gold-dark);
+  box-shadow: var(--radiance-gold);
+  transform: translateY(-1px);
+}
+
+/* Icon visibility based on active theme */
+[data-theme="dark"] .theme-icon-sun {
+  display: block;
+  stroke: var(--gold-light);
+}
+
+[data-theme="dark"] .theme-icon-moon {
+  display: none;
+}
+
+[data-theme="light"] .theme-icon-sun {
+  display: none;
+}
+
+[data-theme="light"] .theme-icon-moon {
+  display: block;
+  stroke: var(--text-primary);
+}
+
+.hamburger-btn {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 32px;
+  height: 32px;
+  padding: 4px;
+}
+
+.hamburger-btn span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: var(--text-primary);
+  transition: transform var(--transition-fast), opacity var(--transition-fast);
+}
+
+/* --------------------------------------------------------------------------
+   7. Hero Section
+   -------------------------------------------------------------------------- */
+.hero-section {
+  padding-top: var(--space-80);
+  padding-bottom: var(--space-80);
+  background-color: var(--bg-surface);
+  border-bottom: 1px solid var(--silver-border);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 350px;
+  height: 350px;
+  background: var(--hero-glow);
+  pointer-events: none;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  gap: var(--space-64);
+  align-items: center;
+}
+
+.hero-subtext {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--gold-dark);
+  margin-top: var(--space-8);
+  margin-bottom: var(--space-24);
+}
+
+.hero-bio {
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-32);
+  max-width: 580px;
+}
+
+.hero-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-8);
+  margin-bottom: var(--space-28);
+}
+
+.hero-cta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-16);
+  margin-top: var(--space-32);
+}
+
+.hero-photo-wrapper {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.hero-photo-wrapper::before {
+  content: '';
+  position: absolute;
+  inset: -12px;
+  background: radial-gradient(circle, rgba(197, 160, 89, 0.15) 0%, rgba(203, 213, 225, 0.1) 60%, transparent 80%);
+  border-radius: var(--radius-lg);
+  z-index: 0;
+  filter: blur(8px);
+}
+
+.hero-photo {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 360px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  border: 1.5px solid var(--gold-border-light);
+  background-color: var(--bg-subtle);
+  box-shadow: var(--radiance-gold), var(--shadow-card);
+}
+
+/* --------------------------------------------------------------------------
+   8. Dedicated Sector: Core Strategic Pillars / Competencies
+   -------------------------------------------------------------------------- */
+.competencies-sector {
+  padding-top: var(--space-64);
+  padding-bottom: var(--space-64);
+  background-color: var(--bg-base);
+  border-bottom: 1px solid var(--silver-border);
+  position: relative;
+}
+
+.competencies-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: var(--space-16);
+}
+
+.competency-card {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--silver-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-20) var(--space-16);
+  text-align: center;
+  box-shadow: var(--shadow-card);
+  transition: all var(--transition-fast);
+  position: relative;
+  overflow: hidden;
+}
+
+.competency-card:hover {
+  border-color: var(--gold-border);
+  transform: translateY(-2px);
+  box-shadow: var(--radiance-gold);
+}
+
+.competency-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--gold-gradient);
+  opacity: 0;
+  transition: opacity var(--transition-fast);
+}
+
+.competency-card:hover::before {
+  opacity: 1;
+}
+
+.competency-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--gold-subtle);
+  border: 1px solid var(--gold-border-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  margin: 0 auto var(--space-12) auto;
+}
+
+.competency-title {
+  font-family: var(--font-heading);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: var(--space-4);
+}
+
+.competency-sub {
+  font-size: 12px;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+/* --------------------------------------------------------------------------
+   9. Web Development Projects (Explore My Work & Auto-Sliding Carousel)
+   -------------------------------------------------------------------------- */
+.revoice-experience-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--gold-border);
+  border-radius: var(--radius-full);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  box-shadow: var(--radiance-gold);
+  margin-top: var(--space-8);
+}
+
+.revoice-experience-tag strong {
+  color: var(--gold-dark);
+}
+
+.carousel-wrapper {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--gold-border-light);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-elevated), var(--radiance-gold);
+  overflow: hidden;
+}
+
+.carousel-top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-16) var(--space-24);
+  background-color: var(--bg-subtle);
+  border-bottom: 1px solid var(--silver-border);
+}
+
+.carousel-status {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--gold-dark);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.carousel-status-dot {
+  width: 7px;
+  height: 7px;
+  background: var(--gold-gradient);
+  border-radius: 50%;
+  box-shadow: 0 0 6px rgba(197, 160, 89, 0.6);
+}
+
+.carousel-slide-counter {
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-secondary);
+}
+
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.carousel-slide {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+.project-slide-inner {
+  display: grid;
+  grid-template-columns: 1.35fr 1fr;
+  align-items: stretch;
+}
+
+.project-slide-media {
+  background-color: var(--bg-base);
+  border-right: 1px solid var(--silver-border);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-32);
+  cursor: pointer;
+  position: relative;
+}
+
+.project-slide-media::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, var(--gold-subtle) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.project-slide-img {
+  width: 100%;
+  max-height: 420px;
+  object-fit: contain;
+  border: 1px solid var(--silver-border);
+  border-radius: var(--radius-sm);
+  background-color: var(--bg-surface);
+  box-shadow: var(--shadow-card);
+  transition: transform var(--transition-fast);
+}
+
+.project-slide-media:hover .project-slide-img {
+  transform: scale(1.02);
+}
+
+.project-slide-content {
+  padding: var(--space-48);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.project-slide-title {
+  font-size: 24px;
+  margin-bottom: var(--space-8);
+}
+
+.project-slide-desc {
+  font-size: 15px;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-24);
+  line-height: 1.5;
+}
+
+.project-tech-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-8);
+  margin-bottom: var(--space-32);
+}
+
+.carousel-bottom-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-16) var(--space-24);
+  border-top: 1px solid var(--silver-border);
+  background-color: var(--bg-surface);
+}
+
+.carousel-dots {
+  display: flex;
+  gap: var(--space-8);
+  align-items: center;
+}
+
+.carousel-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: var(--radius-full);
+  background-color: var(--silver-border-strong);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.carousel-dot.active {
+  background: var(--gold-gradient);
+  width: 24px;
+  box-shadow: 0 0 8px rgba(197, 160, 89, 0.5);
+}
+
+.carousel-arrows {
+  display: flex;
+  gap: var(--space-8);
+}
+
+.carousel-arrow-btn {
+  width: 38px;
+  height: 38px;
+  border: 1px solid var(--silver-border-strong);
+  border-radius: var(--radius-sm);
+  background-color: var(--bg-surface);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-primary);
+  font-size: 16px;
+  transition: all var(--transition-fast);
+}
+
+.carousel-arrow-btn:hover {
+  border-color: var(--gold-primary);
+  color: var(--gold-dark);
+  background-color: var(--gold-subtle);
+  box-shadow: var(--radiance-gold);
+}
+
+/* --------------------------------------------------------------------------
+   10. Data Analytics (Power BI) — Independent Multi-Image Sliders
+   -------------------------------------------------------------------------- */
+.analytics-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-32);
+}
+
+.analytics-card {
+  border: 1px solid var(--gold-border-light);
+  border-radius: var(--radius-lg);
+  background-color: var(--bg-surface);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-card);
+  transition: box-shadow var(--transition-fast), border-color var(--transition-fast);
+}
+
+.analytics-card:hover {
+  border-color: var(--gold-border);
+  box-shadow: var(--shadow-elevated), var(--radiance-gold);
+}
+
+.mini-slider-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  background-color: var(--bg-base);
+  border-bottom: 1px solid var(--silver-border);
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.mini-slider-track {
+  display: flex;
+  height: 100%;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.mini-slide {
+  min-width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-16);
+  box-sizing: border-box;
+}
+
+.mini-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border: 1px solid var(--silver-border);
+  border-radius: var(--radius-sm);
+  background-color: var(--bg-surface);
+}
+
+.mini-slider-controls {
+  position: absolute;
+  bottom: 12px;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--space-16);
+  pointer-events: none;
+}
+
+.mini-slider-dots {
+  display: flex;
+  gap: 6px;
+  pointer-events: auto;
+  background-color: var(--control-bg);
+  padding: 4px 8px;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--silver-border);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+}
+
+.mini-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--silver-border-strong);
+  cursor: pointer;
+}
+
+.mini-dot.active {
+  background: var(--gold-gradient);
+  width: 16px;
+  border-radius: var(--radius-full);
+}
+
+.mini-arrows {
+  display: flex;
+  gap: 6px;
+  pointer-events: auto;
+}
+
+.mini-arrow-btn {
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--silver-border-strong);
+  background-color: var(--control-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  color: var(--control-color);
+  cursor: pointer;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+}
+
+.mini-arrow-btn:hover {
+  border-color: var(--gold-primary);
+  color: var(--gold-dark);
+}
+
+.analytics-card-body {
+  padding: var(--space-24);
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.analytics-card-title {
+  font-size: 19px;
+  margin-bottom: var(--space-8);
+}
+
+.analytics-card-desc {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* --------------------------------------------------------------------------
+   11. Design (Figma Prototypes — Framed Browser Mockups)
+   -------------------------------------------------------------------------- */
+.figma-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-32);
+}
+
+.browser-frame {
+  border: 1px solid var(--gold-border-light);
+  border-radius: var(--radius-lg);
+  background-color: var(--bg-surface);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-card);
+  transition: box-shadow var(--transition-fast), border-color var(--transition-fast);
+}
+
+.browser-frame:hover {
+  border-color: var(--gold-border);
+  box-shadow: var(--shadow-elevated), var(--radiance-gold);
+}
+
+.browser-header {
+  height: 38px;
+  background-color: var(--bg-subtle);
+  border-bottom: 1px solid var(--silver-border);
+  display: flex;
+  align-items: center;
+  padding: 0 var(--space-16);
+  gap: var(--space-8);
+}
+
+.browser-dots {
+  display: flex;
+  gap: 5px;
+}
+
+.browser-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--silver-border-strong);
+}
+
+.browser-address-bar {
+  flex-grow: 1;
+  height: 22px;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--silver-border);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  padding: 0 8px;
+  font-size: 11px;
+  color: var(--text-secondary);
+  margin-left: var(--space-8);
+}
+
+.browser-screen {
+  aspect-ratio: 16 / 10;
+  background-color: var(--bg-base);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-16);
+  cursor: pointer;
+}
+
+.browser-screen img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border: 1px solid var(--silver-border);
+  border-radius: var(--radius-sm);
+  background-color: var(--bg-surface);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+}
+
+.browser-caption {
+  padding: var(--space-20) var(--space-24);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid var(--silver-border);
+  background-color: var(--bg-surface);
+}
+
+.browser-caption-title {
+  font-size: 16px;
+  font-weight: 700;
+  font-family: var(--font-heading);
+}
+
+/* --------------------------------------------------------------------------
+   12. Impact Marketer Newsletter (Auto-Slider)
+   -------------------------------------------------------------------------- */
+.newsletter-showcase-card {
+  border: 1px solid var(--gold-border-light);
+  border-radius: var(--radius-lg);
+  background-color: var(--bg-surface);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+  margin-bottom: var(--space-32);
+}
+
+.fma-tenure-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-16) var(--space-24);
+  background-color: var(--bg-subtle);
+  border-bottom: 1px solid var(--silver-border);
+}
+
+.fma-tenure-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.newsletter-slider-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.newsletter-track {
+  display: flex;
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.newsletter-slide {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+.newsletter-slide-inner {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  align-items: center;
+}
+
+.newsletter-media {
+  background-color: var(--bg-base);
+  border-right: 1px solid var(--silver-border);
+  padding: var(--space-32);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.newsletter-cover-img {
+  width: 100%;
+  max-height: 380px;
+  object-fit: contain;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--silver-border);
+  box-shadow: var(--shadow-card);
+}
+
+.newsletter-content {
+  padding: var(--space-40);
+}
+
+.newsletter-edition-badge {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--gold-dark);
+  text-transform: uppercase;
+  margin-bottom: var(--space-8);
+}
+
+.newsletter-content h3 {
+  font-size: 22px;
+  margin-bottom: var(--space-8);
+}
+
+.newsletter-content p {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin-bottom: var(--space-24);
+}
+
+.email-promo-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-20) var(--space-24);
+  border: 1px solid var(--silver-border);
+  border-radius: var(--radius-md);
+  background-color: var(--bg-surface);
+  box-shadow: var(--shadow-card);
+}
+
+.email-promo-info {
+  display: flex;
+  align-items: center;
+  gap: var(--space-16);
+}
+
+.email-icon-box {
+  width: 42px;
+  height: 42px;
+  background-color: var(--gold-subtle);
+  border: 1px solid var(--gold-border);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+/* --------------------------------------------------------------------------
+   13. Brand Campaigns & Multimedia (Sirasa FM)
+   -------------------------------------------------------------------------- */
+.campaign-card {
+  border: 1px solid var(--gold-border-light);
+  border-radius: var(--radius-lg);
+  background-color: var(--bg-surface);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+}
+
+.campaign-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  align-items: center;
+}
+
+.campaign-video-wrapper {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  background-color: #000000;
+  overflow: hidden;
+  border-right: 1px solid var(--silver-border);
+  cursor: pointer;
+}
+
+.campaign-video-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.9;
+  transition: opacity var(--transition-fast), transform var(--transition-fast);
+}
+
+.campaign-video-wrapper:hover img {
+  opacity: 1;
+  transform: scale(1.02);
+}
+
+.video-play-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(17, 24, 39, 0.35);
+  transition: background-color var(--transition-fast);
+}
+
+.campaign-video-wrapper:hover .video-play-overlay {
+  background-color: rgba(17, 24, 39, 0.45);
+}
+
+.play-circle {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--gold-gradient);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  padding-left: 3px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.25), var(--radiance-gold);
+  transition: transform var(--transition-fast);
+}
+
+.campaign-video-wrapper:hover .play-circle {
+  transform: scale(1.08);
+}
+
+.campaign-body {
+  padding: var(--space-40);
+}
+
+.campaign-body h3 {
+  font-size: 22px;
+  margin-bottom: var(--space-8);
+}
+
+.campaign-body p {
+  font-size: 15px;
+  color: var(--text-secondary);
+  line-height: 1.55;
+  margin-bottom: var(--space-24);
+}
+
+/* --------------------------------------------------------------------------
+   14. Certifications (Full-Image Cards)
+   -------------------------------------------------------------------------- */
+.certifications-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: var(--space-20);
+}
+
+.cert-card {
+  border: 1px solid var(--silver-border);
+  border-radius: var(--radius-md);
+  background-color: var(--bg-surface);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-card);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
+}
+
+.cert-card:hover {
+  border-color: var(--gold-border);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-elevated), var(--radiance-gold);
+}
+
+.cert-img-box {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  background-color: var(--bg-base);
+  border-bottom: 1px solid var(--silver-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-16);
+  cursor: pointer;
+}
+
+.cert-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.cert-body {
+  padding: var(--space-16);
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cert-issuer-label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--gold-dark);
+  margin-bottom: var(--space-4);
+}
+
+.cert-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.35;
+}
+
+.cert-validity {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--text-muted);
+  margin-top: var(--space-6);
+  line-height: 1.35;
+}
+
+.cert-footer {
+  margin-top: var(--space-16);
+  padding-top: var(--space-12);
+  border-top: 1px solid var(--silver-border);
+}
+
+.cert-verify-link {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--gold-dark);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: gap var(--transition-fast), color var(--transition-fast);
+}
+
+.cert-verify-link:hover {
+  color: var(--gold-primary);
+  gap: 7px;
+  text-decoration: underline;
+}
+
+/* --------------------------------------------------------------------------
+   15. Awards & Recognition (Prestigious Gold & Silver Showcase)
+   -------------------------------------------------------------------------- */
+.award-feature-card {
+  border: 1.5px solid var(--gold-border);
+  border-radius: var(--radius-lg);
+  background-color: var(--bg-surface);
+  padding: var(--space-32) var(--space-40);
+  display: flex;
+  align-items: center;
+  gap: var(--space-32);
+  box-shadow: var(--shadow-elevated), var(--radiance-gold);
+  position: relative;
+  overflow: hidden;
+}
+
+.award-feature-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 100%;
+  background: var(--gold-gradient);
+}
+
+.award-trophy-badge {
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  background: var(--gold-subtle);
+  border: 1.5px solid var(--gold-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 34px;
+  flex-shrink: 0;
+  box-shadow: 0 0 15px rgba(197, 160, 89, 0.2);
+}
+
+.award-content {
+  flex-grow: 1;
+}
+
+.award-slider-box {
+  width: 320px;
+  max-width: 100%;
+  flex-shrink: 0;
+}
+
+.award-slider-box .mini-slider-wrapper {
+  aspect-ratio: 4 / 3;
+  border: 1px solid var(--silver-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.award-prestige-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  background-color: var(--gold-subtle);
+  border: 1px solid var(--gold-border);
+  border-radius: var(--radius-full);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--gold-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: var(--space-8);
+}
+
+.award-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: var(--space-4);
+}
+
+.award-event {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--gold-dark);
+  margin-bottom: var(--space-4);
+}
+
+.award-institution {
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.award-badges-showcase {
+  margin-top: var(--space-48);
+  padding: var(--space-32);
+  background-color: var(--bg-surface);
+  border: 1px solid var(--silver-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+}
+
+.award-badges-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--gold-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: var(--space-24);
+  text-align: center;
+}
+
+.award-badges-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-20);
+}
+
+.award-badge-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-20) var(--space-16);
+  background-color: var(--bg-base);
+  border: 1px solid var(--gold-border);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  transition: transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.award-badge-item:hover {
+  transform: translateY(-4px);
+  border-color: var(--gold-primary);
+  box-shadow: var(--shadow-elevated), var(--radiance-gold);
+}
+
+.award-badge-item img {
+  width: 84px;
+  height: 84px;
+  object-fit: contain;
+  margin-bottom: var(--space-12);
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.2));
+  transition: transform var(--transition-fast);
+}
+
+.award-badge-item:hover img {
+  transform: scale(1.05);
+}
+
+.award-badge-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-primary);
+  text-align: center;
+  margin-bottom: var(--space-6);
+  line-height: 1.3;
+}
+
+.award-badge-verify {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--gold-dark);
+  transition: color var(--transition-fast);
+}
+
+.award-badge-item:hover .award-badge-verify {
+  color: var(--gold-primary);
+}
+
+/* --------------------------------------------------------------------------
+   16. Footer
+   -------------------------------------------------------------------------- */
+.footer {
+  padding-top: var(--space-80);
+  padding-bottom: var(--space-40);
+  background-color: var(--bg-surface);
+  border-top: 1px solid var(--silver-border);
+}
+
+.footer-inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-48);
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: var(--space-32);
+}
+
+.footer-brand h3 {
+  font-size: 22px;
+  margin-bottom: var(--space-8);
+}
+
+.footer-brand p {
+  font-size: 14px;
+  color: var(--text-secondary);
+  max-width: 380px;
+  line-height: 1.6;
+}
+
+.footer-contact-items {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+  list-style: none;
+}
+
+.footer-contact-items li {
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.footer-contact-items a {
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.footer-contact-items a:hover {
+  color: var(--gold-dark);
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: var(--space-24);
+  border-top: 1px solid var(--silver-border);
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+/* --------------------------------------------------------------------------
+   17. Micro-Animations & Lightbox
+   -------------------------------------------------------------------------- */
+.fade-up {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.lightbox-modal {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(17, 24, 39, 0.88);
+  backdrop-filter: blur(8px);
+  z-index: 2000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-24);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.lightbox-modal.active {
+  display: flex;
+  opacity: 1;
+}
+
+.lightbox-content {
+  position: relative;
+  max-width: 1000px;
+  width: 100%;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.lightbox-img {
+  max-width: 100%;
+  max-height: 80vh;
+  object-fit: contain;
+  border-radius: var(--radius-sm);
+  background-color: #FFFFFF;
+  box-shadow: 0 0 35px rgba(0, 0, 0, 0.4);
+}
+
+.lightbox-caption {
+  margin-top: var(--space-12);
+  color: #FFFFFF;
+  font-size: 14px;
+  text-align: center;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: -36px;
+  right: 0;
+  color: #FFFFFF;
+  font-size: 28px;
+  cursor: pointer;
+  line-height: 1;
+}
+
+/* --------------------------------------------------------------------------
+   17. Nestlé Navigation Button & Mobile Menu Link
+   -------------------------------------------------------------------------- */
+.btn-nestle {
+  position: relative;
+  border-color: var(--gold-border);
+  font-weight: 600;
+  transition: all var(--transition-fast);
+}
+
+.btn-nestle:hover {
+  border-color: var(--gold-primary);
+  color: var(--gold-dark);
+  box-shadow: var(--radiance-gold);
+}
+
+.mobile-nav-nestle {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .mobile-nav-nestle {
+    display: block;
+    width: 100%;
+    margin-top: var(--space-8);
+  }
+
+  .mobile-nav-nestle .nav-link-nestle {
+    color: var(--gold-dark);
+    font-weight: 600;
+    border: 1px solid var(--gold-border);
+    border-radius: var(--radius-sm);
+    padding: 10px 16px;
+    background-color: var(--gold-subtle);
+    display: block;
+    text-align: center;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   18. Nestlé Case Study Page Styles
+   -------------------------------------------------------------------------- */
+.case-hero {
+  padding-top: var(--space-64);
+  padding-bottom: var(--space-64);
+  background-color: var(--bg-base);
+  border-bottom: 1px solid var(--silver-border);
+  position: relative;
+}
+
+.case-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-8);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  text-decoration: none;
+  margin-bottom: var(--space-24);
+  transition: color var(--transition-fast), transform var(--transition-fast);
+}
+
+.case-back-link:hover {
+  color: var(--gold-dark);
+  transform: translateX(-3px);
+}
+
+.case-title {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: var(--space-16);
+  line-height: 1.2;
+}
+
+.case-intro {
+  font-size: 18px;
+  color: var(--text-secondary);
+  max-width: 780px;
+  line-height: 1.6;
+  margin-bottom: var(--space-24);
+}
+
+.case-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-10);
+  margin-top: var(--space-16);
+}
+
+/* Keyword Research Section Styles */
+.keyword-research-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.35fr;
+  gap: var(--space-40);
+  align-items: start;
+}
+
+.keyword-text-block {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-24);
+}
+
+.keyword-narrative {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+
+.stat-card-gold {
+  display: flex;
+  align-items: center;
+  gap: var(--space-20);
+  padding: var(--space-24) var(--space-28);
+  background-color: var(--bg-surface);
+  border: 1.5px solid var(--gold-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card), var(--radiance-gold);
+}
+
+.stat-card-number {
+  font-family: var(--font-heading);
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--gold-primary);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.stat-card-divider {
+  width: 2px;
+  height: 44px;
+  background-color: var(--gold-border);
+}
+
+.stat-card-label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.stat-card-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-primary);
+  text-transform: lowercase;
+}
+
+.stat-card-subtitle {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+/* Proof Screenshot Component */
+.proof-screenshot-wrapper {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--silver-border-strong);
+  border-radius: var(--radius-md);
+  padding: var(--space-16);
+  box-shadow: var(--shadow-card);
+  transition: all var(--transition-fast);
+}
+
+.proof-screenshot-wrapper:hover {
+  border-color: var(--gold-border);
+  box-shadow: var(--shadow-elevated), var(--radiance-gold);
+}
+
+.screenshot-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  background-color: var(--bg-base);
+  border: 1px solid var(--silver-border);
+  cursor: pointer;
+}
+
+.screenshot-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+  transition: transform var(--transition-normal);
+}
+
+.screenshot-container:hover img {
+  transform: scale(1.02);
+}
+
+.screenshot-overlay-hint {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #FFFFFF;
+  background-color: rgba(11, 12, 16, 0.78);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: var(--radius-full);
+  backdrop-filter: blur(4px);
+  pointer-events: none;
+  transition: opacity var(--transition-fast);
+}
+
+.screenshot-caption {
+  margin-top: var(--space-12);
+  font-size: 13px;
+  color: var(--text-muted);
+  text-align: right;
+  font-style: italic;
+}
+
+/* GEO Section Styles */
+.geo-explainer {
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--text-secondary);
+  max-width: 860px;
+  margin-bottom: var(--space-32);
+}
+
+.geo-questions-box {
+  background-color: var(--bg-surface);
+  border: 1.5px solid var(--gold-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-28) var(--space-32);
+  margin-bottom: var(--space-48);
+  box-shadow: var(--radiance-gold);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-24);
+}
+
+.geo-question-item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+.geo-question-badge {
+  display: inline-flex;
+  align-self: flex-start;
+  align-items: center;
+  padding: 3px 10px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--gold-dark);
+  background-color: var(--gold-subtle);
+  border: 1px solid var(--gold-border-light);
+  border-radius: var(--radius-full);
+}
+
+.geo-question-text {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.45;
+}
+
+/* GEO Platform Tabs */
+.geo-tabs-nav {
+  display: flex;
+  gap: var(--space-12);
+  margin-bottom: var(--space-32);
+  border-bottom: 1px solid var(--silver-border);
+  padding-bottom: var(--space-16);
+  overflow-x: auto;
+}
+
+.geo-tab-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-8);
+  padding: 10px 20px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  background-color: var(--bg-surface);
+  border: 1px solid var(--silver-border-strong);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.geo-tab-btn:hover {
+  color: var(--text-primary);
+  border-color: var(--gold-border);
+}
+
+.geo-tab-btn.active {
+  color: #FFFFFF;
+  background: var(--gold-gradient);
+  border-color: var(--gold-dark);
+  box-shadow: 0 2px 10px rgba(197, 160, 89, 0.3);
+}
+
+[data-theme="light"] .geo-tab-btn.active {
+  color: #FFFFFF;
+}
+
+.geo-tab-panel {
+  display: none;
+}
+
+.geo-tab-panel.active {
+  display: block;
+}
+
+/* GEO Platform Cards */
+.geo-platform-card {
+  background-color: var(--bg-surface);
+  border: 1.5px solid var(--silver-border-strong);
+  border-radius: var(--radius-lg);
+  padding: var(--space-32);
+  box-shadow: var(--shadow-card);
+  transition: all var(--transition-fast);
+}
+
+.geo-platform-card:hover {
+  border-color: var(--gold-border);
+}
+
+.geo-platform-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-28);
+  padding-bottom: var(--space-16);
+  border-bottom: 1px solid var(--silver-border);
+}
+
+.geo-platform-title {
+  display: flex;
+  align-items: center;
+  gap: var(--space-12);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.geo-platform-badge {
+  font-size: 13px;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  background-color: var(--gold-subtle);
+  border: 1px solid var(--gold-border);
+  color: var(--gold-dark);
+}
+
+.geo-questions-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-32);
+}
+
+.geo-q-card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-base);
+  border: 1px solid var(--silver-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-20);
+  gap: var(--space-16);
+}
+
+.geo-q-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.geo-q-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--gold-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.geo-q-summary {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  flex-grow: 1;
+}
+
+.geo-q-screenshot-box {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  background-color: #000000;
+  border: 1px solid var(--silver-border);
+  cursor: pointer;
+}
+
+.geo-q-screenshot-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+  transition: transform var(--transition-normal);
+}
+
+.geo-q-screenshot-box:hover img {
+  transform: scale(1.03);
+}
+
+/* Key Takeaway & Snapshot Note */
+.key-takeaway-card {
+  margin-top: var(--space-48);
+  padding: var(--space-28) var(--space-32);
+  background-color: var(--bg-surface);
+  border: 1.5px solid var(--gold-border);
+  border-left: 6px solid var(--gold-primary);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card), var(--radiance-gold);
+}
+
+.key-takeaway-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-10);
+  margin-bottom: var(--space-12);
+}
+
+.key-takeaway-icon {
+  font-size: 20px;
+}
+
+.key-takeaway-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--gold-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.key-takeaway-text {
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.geo-snapshot-note {
+  margin-top: var(--space-20);
+  font-size: 13px;
+  color: var(--text-muted);
+  font-style: italic;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Responsiveness for Nestlé Page */
+@media (max-width: 900px) {
+  .keyword-research-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-32);
+  }
+
+  .geo-questions-box {
+    grid-template-columns: 1fr;
+    gap: var(--space-20);
+  }
+
+  .geo-questions-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-24);
+  }
+}
+
+@media (max-width: 640px) {
+  .case-title {
+    font-size: 30px;
+  }
+
+  .case-intro {
+    font-size: 16px;
+  }
+
+  .stat-card-gold {
+    padding: var(--space-16) var(--space-20);
+    gap: var(--space-16);
+  }
+
+  .stat-card-number {
+    font-size: 38px;
+  }
+
+  .geo-platform-card {
+    padding: var(--space-20);
+  }
+}

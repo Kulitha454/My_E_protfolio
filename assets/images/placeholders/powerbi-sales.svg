@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgSales" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a1329" />
+      <stop offset="100%" stop-color="#122347" />
+    </linearGradient>
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffd875" />
+      <stop offset="100%" stop-color="#d4af37" />
+    </linearGradient>
+    <linearGradient id="areaGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#d4af37" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#d4af37" stop-opacity="0" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" fill="url(#bgSales)" rx="12" stroke="#d4af37" stroke-width="1.5" stroke-opacity="0.3" />
+
+  <!-- Power BI Header -->
+  <rect x="0" y="0" width="800" height="50" fill="#070c18" rx="12" />
+  <rect x="0" y="38" width="800" height="12" fill="#070c18" />
+  <circle cx="30" cy="25" r="7" fill="#ef4444" />
+  <circle cx="50" cy="25" r="7" fill="#f59e0b" />
+  <circle cx="70" cy="25" r="7" fill="#10b981" />
+
+  <rect x="100" y="14" width="165" height="22" rx="4" fill="#16274e" />
+  <text x="182" y="29" font-family="sans-serif" font-size="11" font-weight="700" fill="#ffd875" text-anchor="middle">📊 6-PAGE EXECUTIVE SUITE</text>
+  <text x="750" y="30" font-family="sans-serif" font-size="12" font-weight="600" fill="#94a3b8" text-anchor="end">Enterprise Power BI Architecture</text>
+
+  <!-- Title Banner -->
+  <text x="40" y="90" font-family="sans-serif" font-size="20" font-weight="800" fill="#ffffff">Executive Sales &amp; Profitability Analytics</text>
+  <text x="40" y="112" font-family="sans-serif" font-size="13" font-weight="500" fill="#94a3b8">Cross-functional analysis across YoY trends, customer tiers, product lines &amp; freight logistics</text>
+
+  <!-- 4 KPI Metrics -->
+  <g transform="translate(40, 130)">
+    <!-- KPI 1 -->
+    <rect x="0" y="0" width="168" height="75" rx="8" fill="#101d3b" stroke="#d4af37" stroke-width="1" stroke-opacity="0.5"/>
+    <text x="14" y="24" font-family="sans-serif" font-size="11" font-weight="600" fill="#94a3b8">Total Gross Revenue</text>
+    <text x="14" y="54" font-family="sans-serif" font-size="24" font-weight="800" fill="#ffd875">$13.24M</text>
+    <text x="14" y="68" font-family="sans-serif" font-size="10" font-weight="600" fill="#10b981">▲ +24.6% YoY</text>
+
+    <!-- KPI 2 -->
+    <rect x="184" y="0" width="168" height="75" rx="8" fill="#101d3b" stroke="#38bdf8" stroke-width="1" stroke-opacity="0.3"/>
+    <text x="198" y="24" font-family="sans-serif" font-size="11" font-weight="600" fill="#94a3b8">Net Profit Margin</text>
+    <text x="198" y="54" font-family="sans-serif" font-size="24" font-weight="800" fill="#38bdf8">$3.81M</text>
+    <text x="198" y="68" font-family="sans-serif" font-size="10" font-weight="600" fill="#38bdf8">28.8% Margin</text>
+
+    <!-- KPI 3 -->
+    <rect x="368" y="0" width="168" height="75" rx="8" fill="#101d3b" stroke="#d4af37" stroke-width="1" stroke-opacity="0.3"/>
+    <text x="382" y="24" font-family="sans-serif" font-size="11" font-weight="600" fill="#94a3b8">Enterprise Clients</text>
+    <text x="382" y="54" font-family="sans-serif" font-size="24" font-weight="800" fill="#ffffff">1,420</text>
+    <text x="382" y="68" font-family="sans-serif" font-size="10" font-weight="600" fill="#10b981">▲ 92% Retention</text>
+
+    <!-- KPI 4 -->
+    <rect x="552" y="0" width="168" height="75" rx="8" fill="#101d3b" stroke="#38bdf8" stroke-width="1" stroke-opacity="0.3"/>
+    <text x="566" y="24" font-family="sans-serif" font-size="11" font-weight="600" fill="#94a3b8">Avg Shipping Days</text>
+    <text x="566" y="54" font-family="sans-serif" font-size="24" font-weight="800" fill="#ffffff">2.8 Days</text>
+    <text x="566" y="68" font-family="sans-serif" font-size="10" font-weight="600" fill="#10b981">▼ -18% Faster</text>
+  </g>
+
+  <!-- Sales Growth Area Chart -->
+  <g transform="translate(40, 225)">
+    <rect x="0" y="0" width="460" height="235" rx="8" fill="#0d1833" stroke="rgba(255,255,255,0.06)" stroke-width="1" />
+    <text x="20" y="28" font-family="sans-serif" font-size="13" font-weight="700" fill="#f1f5f9">Quarterly Revenue vs Profit Trajectory ($M)</text>
+
+    <!-- Chart Grid Lines -->
+    <line x1="40" y1="60" x2="430" y2="60" stroke="#1f2f55" stroke-width="1" stroke-dasharray="4" />
+    <line x1="40" y1="110" x2="430" y2="110" stroke="#1f2f55" stroke-width="1" stroke-dasharray="4" />
+    <line x1="40" y1="160" x2="430" y2="160" stroke="#1f2f55" stroke-width="1" stroke-dasharray="4" />
+    <line x1="40" y1="200" x2="430" y2="200" stroke="#2a3f70" stroke-width="1.5" />
+
+    <!-- Area Fill -->
+    <path d="M 60,180 Q 120,150 180,130 T 300,90 T 420,50 L 420,200 L 60,200 Z" fill="url(#areaGradient)" />
+    <!-- Line -->
+    <path d="M 60,180 Q 120,150 180,130 T 300,90 T 420,50" fill="none" stroke="url(#goldGradient)" stroke-width="3" />
+    <!-- Nodes -->
+    <circle cx="60" cy="180" r="4" fill="#ffd875" />
+    <circle cx="180" cy="130" r="4" fill="#ffd875" />
+    <circle cx="300" cy="90" r="4" fill="#ffd875" />
+    <circle cx="420" cy="50" r="6" fill="#ffffff" stroke="#d4af37" stroke-width="2" />
+
+    <!-- X-Labels -->
+    <text x="60" y="218" font-family="sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">Q1 2025</text>
+    <text x="180" y="218" font-family="sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">Q2 2025</text>
+    <text x="300" y="218" font-family="sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">Q3 2025</text>
+    <text x="420" y="218" font-family="sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">Q4 2025</text>
+  </g>
+
+  <!-- Right: 6-Page Navigation tabs list -->
+  <g transform="translate(520, 225)">
+    <rect x="0" y="0" width="240" height="235" rx="8" fill="#0d1833" stroke="rgba(255,255,255,0.06)" stroke-width="1" />
+    <text x="20" y="28" font-family="sans-serif" font-size="13" font-weight="700" fill="#f1f5f9">6 Executive Modules</text>
+
+    <!-- Page list items -->
+    <rect x="15" y="45" width="210" height="26" rx="4" fill="#172b54" stroke="#d4af37" stroke-width="1"/>
+    <text x="25" y="62" font-family="sans-serif" font-size="11" font-weight="700" fill="#ffd875">1. Executive Overview ($13M+)</text>
+
+    <rect x="15" y="76" width="210" height="26" rx="4" fill="#122040" />
+    <text x="25" y="93" font-family="sans-serif" font-size="11" fill="#cbd5e1">2. YoY Profit &amp; Margins</text>
+
+    <rect x="15" y="107" width="210" height="26" rx="4" fill="#122040" />
+    <text x="25" y="124" font-family="sans-serif" font-size="11" fill="#cbd5e1">3. Customer Lifetime Value</text>
+
+    <rect x="15" y="138" width="210" height="26" rx="4" fill="#122040" />
+    <text x="25" y="155" font-family="sans-serif" font-size="11" fill="#cbd5e1">4. Product Category Matrix</text>
+
+    <rect x="15" y="169" width="210" height="26" rx="4" fill="#122040" />
+    <text x="25" y="186" font-family="sans-serif" font-size="11" fill="#cbd5e1">5. Shipping &amp; Logistics</text>
+
+    <rect x="15" y="200" width="210" height="26" rx="4" fill="#122040" />
+    <text x="25" y="217" font-family="sans-serif" font-size="11" fill="#cbd5e1">6. Quarterly Sales Trends</text>
+  </g>
+
+  <!-- Replace Image Hint Overlay -->
+  <g transform="translate(620, 75)">
+    <rect x="0" y="0" width="140" height="24" rx="12" fill="#080e1b" stroke="#d4af37" stroke-width="1" />
+    <text x="70" y="16" font-family="sans-serif" font-size="10" font-weight="700" fill="#ffd875" text-anchor="middle">📷 Drop Screenshot Here</text>
+  </g>
+</svg>

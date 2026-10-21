@@ -1,0 +1,38 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2"
+  ],
+  "type": [
+    "VerifiableCredential"
+  ],
+  "id": "https://www.credential.net/1f1c55ea-d4f3-42a9-8b78-e4482aa76516",
+  "name": "AI-Powered Performance Ads Certification",
+  "description": "Understand the importance of Google’s cross-channel AI solutions and learn how to create and optimize these campaigns to achieve business goals.\n\nBy earning the AI-Powered Performance Ads Certification, Google recognizes your ability to:\n\nDescribe the importance of AI throughout Google Ads campaigns.\nPrepare an AI automation strategy that aligns to your business goals.\nIdentify the benefits of using cross-channel AI-powered campaigns and tools.\nExplain the importance of adopting an agile mindset, and adopt flexible budgets to respond to demand and drive real business outcomes.\nUse Google Ads reporting and insights to bring transparency to Google’s AI.",
+  "image": "https://pdf.ms.credential.net/v2/certificate/image?env=production&credential=99720yxn&variant=medium",
+  "issuer": {
+    "id": "did:web:api.accredible.com:v1:verifiable_credential:organizations:89126",
+    "name": "Skillshop"
+  },
+  "validFrom": "2026-05-27T00:00:00Z",
+  "validUntil": "2027-05-27T00:00:00Z",
+  "credentialSubject": {
+    "name": "Kulitha Hansaja",
+    "identifier": {
+      "type": "IdentityObject",
+      "hashed": true,
+      "identityHash": "sha256$74254ae3f8658a3aa18dc8ccca28a23068ad7b180d7e40a0b320c335640bfa37",
+      "identityType": "email",
+      "salt": "dc06a50082c877531f8d36657839240c"
+    }
+  },
+  "completionDate": "2026-05-27",
+  "credential_creation_flow_from_LMS": "certification_awarded",
+  "proof": {
+    "type": "DataIntegrityProof",
+    "cryptosuite": "eddsa-rdfc-2022",
+    "created": "2026-09-25T22:35:41Z",
+    "verificationMethod": "did:web:api.accredible.com:v1:verifiable_credential:organizations:89126#a67e4458-dc10-11f0-ae13-8f69fb9f91bd",
+    "proofPurpose": "assertionMethod",
+    "proofValue": "z4fkYiExTWS4UKMVf8M8JCwyiyweANE6vPgpva7cN8AghMG9HDPBRRRgeHzWFPSfC9T5i3y96qM156Ys1ZCUbYTX2"
+  }
+}

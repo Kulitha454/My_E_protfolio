@@ -1,0 +1,38 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2"
+  ],
+  "type": [
+    "VerifiableCredential"
+  ],
+  "id": "https://www.credential.net/450c4177-6fcc-4add-98d7-cbd2c2a69a2a",
+  "name": "Google Ads Search Certification",
+  "description": "Demonstrate your mastery of building and optimizing Google Search campaigns. Certified users will exhibit the ability to leverage automated solutions like Smart Bidding to boost campaign performance for specific marketing objectives.\n\nBy earning the Google Ads Search Certification, Google recognizes your ability to:\n\nTranslate a vision for online marketing into a coherent digital marketing strategy\nDevelop a Google Search strategy with wider company marketing plans\nGenerate a plan to increase leads, sales or web traffic using Google Search\nEnsure your Search marketing plan is aligned with your digital marketing budget",
+  "image": "https://pdf.ms.credential.net/badge/image?env=production&credential=t8sp19vj",
+  "issuer": {
+    "id": "did:web:api.accredible.com:v1:verifiable_credential:organizations:89126",
+    "name": "Skillshop"
+  },
+  "validFrom": "2026-05-27T00:00:00Z",
+  "validUntil": "2027-05-27T00:00:00Z",
+  "credentialSubject": {
+    "name": "Kulitha Hansaja",
+    "identifier": {
+      "type": "IdentityObject",
+      "hashed": true,
+      "identityHash": "sha256$61f9b37a6e5a77a6e4cafce7b087a97ea63aa6b6d70ae30a0b45c0808209d485",
+      "identityType": "email",
+      "salt": "48a8071f0884e7a6afc702f257c90475"
+    }
+  },
+  "completionDate": "2026-05-27",
+  "credential_creation_flow_from_LMS": "certification_awarded",
+  "proof": {
+    "type": "DataIntegrityProof",
+    "cryptosuite": "eddsa-rdfc-2022",
+    "created": "2026-09-25T22:34:48Z",
+    "verificationMethod": "did:web:api.accredible.com:v1:verifiable_credential:organizations:89126#a67e4458-dc10-11f0-ae13-8f69fb9f91bd",
+    "proofPurpose": "assertionMethod",
+    "proofValue": "z5EogQQPN1QhxdtE6NtadcrgAYvMhA5aHQbcqNiqGNj4BHsHV6smPFLTdQg3Sq3Vqakbbfofv5NeP4iPC3iBQrVGa"
+  }
+}

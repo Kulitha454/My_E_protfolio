@@ -1,0 +1,38 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2"
+  ],
+  "type": [
+    "VerifiableCredential"
+  ],
+  "id": "https://www.credential.net/31428ce6-3e2d-4575-849b-1110dd212f4f",
+  "name": "Google Analytics Certification",
+  "description": "Showcase your ability to use Google Analytics 4 to gain valuable insights and make marketing decisions. Certified users will demonstrate an understanding of Google Analytics, including how to set up and structure a property, and use various reporting tools and features.\n\nBy earning the Google Analytics Certification, Google recognizes your ability to:\n\nSetup a Google Analytics 4 property for a website or an app\nCollect the data you need for your business and use the various reporting tools and features\nRecognize key measurement features that can show the effectiveness of your online marketing efforts",
+  "image": "https://pdf.ms.credential.net/badge/image?env=production&credential=w6exai1r",
+  "issuer": {
+    "id": "did:web:api.accredible.com:v1:verifiable_credential:organizations:89126",
+    "name": "Skillshop"
+  },
+  "validFrom": "2026-04-20T00:00:00Z",
+  "validUntil": "2027-04-20T00:00:00Z",
+  "credentialSubject": {
+    "name": "Kulitha Hansaja",
+    "identifier": {
+      "type": "IdentityObject",
+      "hashed": true,
+      "identityHash": "sha256$5e9aa5ccc6cfc90fc2b075b3ec38ed8df9a043ec8a9c2e461beecabace75d0c2",
+      "identityType": "email",
+      "salt": "f285738ecc4262cee6f253621c2bca3c"
+    }
+  },
+  "completionDate": "2026-04-20",
+  "credential_creation_flow_from_LMS": "certification_awarded",
+  "proof": {
+    "type": "DataIntegrityProof",
+    "cryptosuite": "eddsa-rdfc-2022",
+    "created": "2026-09-25T22:33:38Z",
+    "verificationMethod": "did:web:api.accredible.com:v1:verifiable_credential:organizations:89126#a67e4458-dc10-11f0-ae13-8f69fb9f91bd",
+    "proofPurpose": "assertionMethod",
+    "proofValue": "z3Q92ec5k35mBVdHHQCJkyH3CTCidQWHy8umYYvXzPtHJfcNvJBrZAaLhcTHDFyUkPhHG4mhQEU8YGeZBGhaTRqkG"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2"
+  ],
+  "type": [
+    "VerifiableCredential"
+  ],
+  "id": "https://www.credential.net/f47de4b2-d007-4303-adb6-d6dff959fe61",
+  "name": "Conversion Optimization Certification Exam",
+  "description": "Google Marketing Platform product certifications identify qualified users who demonstrate the ability to perform critical tasks and workflows with Platform products. This certification exam is designed for users with hands-on experience, and will test on specific predetermined criteria aligned with critical job tasks.\n\nAbout this exam\n\nDemonstrate your mastery of driving growth with mobile experiences. This exam tests knowledge across a broad range of topics related to mobile user experience. Users completing this exam should have a familiarity with mobile as an acquisition channel and understand its role in online behavior.\n\nBy earning the Google Ads Drive Growth with Mobile Certification, Google Recognizes your ability to:\n\nAssess the impact of user experience beyond the click\nCollaborate with key partners to build a more user-focused organization\nDescribe the core components and value of conversion rate optimization\nExplain the role marketers play in ensuring fast mobile experiences\nExplain the role marketers play in creating a seamless user experience\nImplement best practices to increase personalization in the user experience on mobile",
+  "image": "https://pdf.ms.credential.net/v2/certificate/image?env=production&credential=pr8ct54i&variant=medium",
+  "issuer": {
+    "id": "did:web:api.accredible.com:v1:verifiable_credential:organizations:89126",
+    "name": "Skillshop"
+  },
+  "validFrom": "2026-05-27T00:00:00Z",
+  "validUntil": "2027-05-27T00:00:00Z",
+  "credentialSubject": {
+    "name": "Kulitha Hansaja",
+    "identifier": {
+      "type": "IdentityObject",
+      "hashed": true,
+      "identityHash": "sha256$8a878fbda25bf24c4320418de7ba44ff450f018fa0bf405dfcc6c52c9a61ea40",
+      "identityType": "email",
+      "salt": "b14182d3029a67aa3e074440e66a6948"
+    }
+  },
+  "completionDate": "2026-05-27",
+  "credential_creation_flow_from_LMS": "certification_awarded",
+  "proof": {
+    "type": "DataIntegrityProof",
+    "cryptosuite": "eddsa-rdfc-2022",
+    "created": "2026-09-25T22:36:37Z",
+    "verificationMethod": "did:web:api.accredible.com:v1:verifiable_credential:organizations:89126#a67e4458-dc10-11f0-ae13-8f69fb9f91bd",
+    "proofPurpose": "assertionMethod",
+    "proofValue": "z5tcQE1Ffj69v1vQpzmxymQXCQwwqVHosGvykYi9xocfVthCbj2TyBXbuuZkve2KeBVF8n8mvEw4ugCzpcuUzGkjm"
+  }
+}

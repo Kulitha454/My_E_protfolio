@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kulitha Hansaja | Aspiring Digital Marketer</title>
+  <meta name="description" content="Personal digital marketing & marketing analytics portfolio of Kulitha Hansaja.">
+  <meta name="author" content="Kulitha Hansaja">
+
+  <!-- Google Fonts: Space Grotesk & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+
+  <!-- Custom Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <!-- Theme Script (Defaults to dark on first visit, prevents FOUC) -->
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('kh_theme');
+      const theme = savedTheme ? savedTheme : 'dark';
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- ========================================================================
+       NAVIGATION BAR
+       ======================================================================== -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="#home" class="nav-brand" aria-label="Kulitha Hansaja">
+        <span>Kulitha Hansaja</span>
+        <span class="brand-dot"></span>
+      </a>
+
+      <nav>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="#home" class="nav-link active">About</a></li>
+          <li><a href="#projects" class="nav-link">Web Dev</a></li>
+          <li><a href="#design" class="nav-link">Figma</a></li>
+          <li><a href="#analytics" class="nav-link">Power BI</a></li>
+          <li><a href="#email" class="nav-link">Email</a></li>
+          <li><a href="#linkedin" class="nav-link">LinkedIn</a></li>
+          <li><a href="#campaigns" class="nav-link">Campaigns</a></li>
+          <li><a href="#certifications" class="nav-link">Certifications</a></li>
+          <li><a href="#awards" class="nav-link">Awards</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+          <li class="mobile-nav-nestle"><a href="nestle.html" class="nav-link nav-link-nestle">Nestlé</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle light or dark theme" title="Toggle theme">
+          <svg class="theme-icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="theme-icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+        <a href="mailto:Kulithahansaja123@gmail.com" class="btn btn-silver btn-sm">Get in Touch</a>
+        <a href="nestle.html" class="btn btn-silver btn-sm btn-nestle">Nestlé</a>
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       1. HERO & ABOUT SECTION (Restored Tag Pills + CTA Buttons Layout)
+       ======================================================================== -->
+  <section class="hero-section" id="home">
+    <div class="container hero-grid">
+      
+      <!-- Text Content -->
+      <div class="hero-content fade-up">
+        <span class="eyebrow">Digital Marketing &amp; Analytics</span>
+        <h1>Hi, I'm Kulitha Hansaja</h1>
+        <div class="hero-subtext">Aspiring Digital Marketer</div>
+        
+        <p class="hero-bio">
+          A results-driven digital marketing undergraduate with a passion for data, design, and emerging technology. Quick to adapt in fast-changing environments, I leverage AI and analytics to build strategies that create real impact.
+        </p>
+
+        <!-- Focus Area Outlined Pill Tags -->
+        <div class="hero-tags">
+          <span class="tag-pill">SEO</span>
+          <span class="tag-pill">Performance Marketing</span>
+          <span class="tag-pill">GEO</span>
+          <span class="tag-pill">Web Development</span>
+          <span class="tag-pill">Web Design</span>
+          <span class="tag-pill">Marketing Analytics</span>
+          <span class="tag-pill">Google Analytics</span>
+          <span class="tag-pill">Google Search Console</span>
+        </div>
+
+        <!-- Action CTAs -->
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-gold">Explore My Work &darr;</a>
+          <!-- Real LinkedIn Profile Link -->
+          <a href="https://www.linkedin.com/in/kulitha-hansaja-1a69a0203" target="_blank" rel="noopener noreferrer" class="btn btn-silver" id="heroLinkedinBtn">
+            LinkedIn Profile &nearr;
+          </a>
+        </div>
+      </div>
+
+      <!-- Real Profile Photo with Soft Radiance -->
+      <div class="hero-photo-wrapper fade-up">
+        <img src="portfolio/my_profile_picture.jpg" alt="Kulitha Hansaja" class="hero-photo">
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       2. WEB DEVELOPMENT PROJECTS (EXPLORE MY WORK & AUTO-SLIDING CAROUSEL)
+       ======================================================================== -->
+  <section class="section-alt" id="projects">
+    <div class="container">
+      
+      <div class="section-header fade-up">
+        <span class="eyebrow">Web Development &bull; Explore My Work</span>
+        <h2 class="section-title">Selected Web Projects</h2>
+        <p class="section-desc">
+          Frontend web solutions developed with clean semantic markup, responsive structures, and modern styling.
+        </p>
+        
+        <!-- Trainee Web Developer at Revoice Sri Lanka Note -->
+        <div style="margin-top: 14px;">
+          <div class="revoice-experience-tag">
+            <span>💻</span>
+            <span>Trainee Web Developer at <strong>Revoice Sri Lanka</strong> &bull; Wix, HTML5, CSS3, JavaScript</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Upgraded Carousel Container with Subtle Radiance -->
+      <div class="carousel-wrapper fade-up">
+        
+        <div class="carousel-top-bar">
+          <div class="carousel-status">
+            <span class="carousel-status-dot"></span>
+            <span>Live Interactive Showcase</span>
+          </div>
+          <div class="carousel-slide-counter" id="carouselCounter">01 / 04</div>
+        </div>
+
+        <div class="carousel-container">
+          <div class="carousel-track" id="carouselTrack">
+            
+            <!-- Slide 1: Plywood Sandakelum -->
+            <div class="carousel-slide">
+              <div class="project-slide-inner">
+                <div class="project-slide-media" data-zoom="portfolio/Plywood Sandakelum.png" data-caption="Plywood Sandakelum - Plywood board & sheet supplier website">
+                  <img src="portfolio/Plywood Sandakelum.png" alt="Plywood Sandakelum Website" class="project-slide-img" loading="lazy">
+                </div>
+                <div class="project-slide-content">
+                  <h3 class="project-slide-title">Plywood Sandakelum</h3>
+                  <p class="project-slide-desc">Plywood board &amp; sheet supplier website with product catalog showcase.</p>
+                  <div class="project-tech-row">
+                    <span class="tech-tag">HTML5</span>
+                    <span class="tech-tag">CSS</span>
+                    <span class="tech-tag">JavaScript</span>
+                  </div>
+                  <div>
+                    <a href="https://kulitha112.github.io/plywood-sandakalum/" target="_blank" rel="noopener noreferrer" class="btn btn-gold btn-sm">
+                      View Live Site &nearr;
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 2: Phone House -->
+            <div class="carousel-slide">
+              <div class="project-slide-inner">
+                <div class="project-slide-media" data-zoom="portfolio/Phone House.png" data-caption="Phone House - Phone & accessories business website">
+                  <img src="portfolio/Phone House.png" alt="Phone House Website" class="project-slide-img" loading="lazy">
+                </div>
+                <div class="project-slide-content">
+                  <h3 class="project-slide-title">Phone House</h3>
+                  <p class="project-slide-desc">Phone &amp; accessories business website showcasing smartphone tiers and gadgets.</p>
+                  <div class="project-tech-row">
+                    <span class="tech-tag">HTML5</span>
+                    <span class="tech-tag">CSS</span>
+                    <span class="tech-tag">JavaScript</span>
+                  </div>
+                  <div>
+                    <a href="https://kulitha112.github.io/phone-accessories/" target="_blank" rel="noopener noreferrer" class="btn btn-gold btn-sm">
+                      View Live Site &nearr;
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 3: Construction Site -->
+            <div class="carousel-slide">
+              <div class="project-slide-inner">
+                <div class="project-slide-media" data-zoom="portfolio/construction_site.png" data-caption="Construction Company - Construction company website">
+                  <img src="portfolio/construction_site.png" alt="Construction Company Website" class="project-slide-img" loading="lazy">
+                </div>
+                <div class="project-slide-content">
+                  <h3 class="project-slide-title">Construction Company</h3>
+                  <p class="project-slide-desc">Construction site company website displaying engineering capabilities and civil services.</p>
+                  <div class="project-tech-row">
+                    <span class="tech-tag">HTML5</span>
+                    <span class="tech-tag">CSS</span>
+                    <span class="tech-tag">JavaScript</span>
+                  </div>
+                  <div>
+                    <a href="https://kulitha112.github.io/Architecture-Firm/" target="_blank" rel="noopener noreferrer" class="btn btn-gold btn-sm">
+                      View Live Site &nearr;
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 4: Dream House -->
+            <div class="carousel-slide">
+              <div class="project-slide-inner">
+                <div class="project-slide-media" data-zoom="portfolio/Dream House.png" data-caption="Dream House - Furniture & interior design website">
+                  <img src="portfolio/Dream House.png" alt="Dream House Website" class="project-slide-img" loading="lazy">
+                </div>
+                <div class="project-slide-content">
+                  <h3 class="project-slide-title">Dream House</h3>
+                  <p class="project-slide-desc">Furniture/interior design website inspired by a Thai-style Wabi Sabi concept.</p>
+                  <div class="project-tech-row">
+                    <span class="tech-tag">HTML5</span>
+                    <span class="tech-tag">CSS</span>
+                    <span class="tech-tag">JavaScript</span>
+                  </div>
+                  <div>
+                    <a href="https://kulitha112.github.io/Dream-Home/" target="_blank" rel="noopener noreferrer" class="btn btn-gold btn-sm">
+                      View Live Site &nearr;
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Carousel Navigation Bar -->
+        <div class="carousel-bottom-nav">
+          <div class="carousel-dots" id="carouselDots"></div>
+          <div class="carousel-arrows">
+            <button class="carousel-arrow-btn" id="carouselPrev" aria-label="Previous slide">&larr;</button>
+            <button class="carousel-arrow-btn" id="carouselNext" aria-label="Next slide">&rarr;</button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       3. DESIGN (FIGMA PROTOTYPES — FRAMED BROWSER MOCKUPS)
+       ======================================================================== -->
+  <section class="section" id="design">
+    <div class="container">
+      
+      <div class="section-header fade-up">
+        <span class="eyebrow">UI/UX Design</span>
+        <h2 class="section-title">Figma Web Prototypes</h2>
+        <p class="section-desc">
+          High-fidelity user interface prototypes engineered for the Future Marketers Association website.
+        </p>
+      </div>
+
+      <div class="figma-grid">
+        
+        <!-- Figma 1: Home Page -->
+        <div class="browser-frame fade-up">
+          <div class="browser-header">
+            <div class="browser-dots">
+              <span class="browser-dot"></span>
+              <span class="browser-dot"></span>
+              <span class="browser-dot"></span>
+            </div>
+            <div class="browser-address-bar">figma.com/proto/future-marketers-association/home</div>
+          </div>
+          <div class="browser-screen" data-zoom="portfolio/Figma_homepage.png" data-caption="FMA Website - Home Page UI Prototype">
+            <img src="portfolio/Figma_homepage.png" alt="FMA Website Home Page Figma Prototype" loading="lazy">
+          </div>
+          <div class="browser-caption">
+            <div class="browser-caption-title">FMA Home Page Prototype</div>
+            <a href="https://www.figma.com/proto/Aj1T9Y0qOgS30dIe6r15oB/Future-Marketers-Association?node-id=1-2" target="_blank" rel="noopener noreferrer" class="btn btn-gold btn-sm">
+              Launch Prototype &nearr;
+            </a>
+          </div>
+        </div>
+
+        <!-- Figma 2: About Us Page -->
+        <div class="browser-frame fade-up">
+          <div class="browser-header">
+            <div class="browser-dots">
+              <span class="browser-dot"></span>
+              <span class="browser-dot"></span>
+              <span class="browser-dot"></span>
+            </div>
+            <div class="browser-address-bar">figma.com/proto/future-marketers-association/about-us</div>
+          </div>
+          <div class="browser-screen" data-zoom="portfolio/figma_aboutus.png" data-caption="FMA Website - About Us UI Prototype">
+            <img src="portfolio/figma_aboutus.png" alt="FMA Website About Us Figma Prototype" loading="lazy">
+          </div>
+          <div class="browser-caption">
+            <div class="browser-caption-title">FMA About Us Prototype</div>
+            <a href="https://www.figma.com/proto/yq4qPdN9MhY1PBRvf4GVaw/About-Us?node-id=146-54" target="_blank" rel="noopener noreferrer" class="btn btn-gold btn-sm">
+              Launch Prototype &nearr;
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       4. DATA ANALYTICS (POWER BI DASHBOARDS)
+       ======================================================================== -->
+  <section class="section-alt" id="analytics">
+    <div class="container">
+      
+      <div class="section-header fade-up">
+        <span class="eyebrow">Marketing Analytics</span>
+        <h2 class="section-title">Power BI Dashboards</h2>
+        <p class="section-desc">
+          Interactive business intelligence reports engineered with Power Query ETL pipelines and custom DAX measures.
+        </p>
+      </div>
+
+      <div class="analytics-grid">
+        
+        <!-- Power BI Card 1: Employee Performance Dashboard (2 Screenshots) -->
+        <div class="analytics-card fade-up">
+          <div class="mini-slider-wrapper" data-mini-slider data-zoom="portfolio/power_bi_project01.png" data-caption="Employee Performance Dashboard - Order Analysis Across 10 Employees">
+            <div class="mini-slider-track">
+              <div class="mini-slide">
+                <img src="portfolio/power_bi_project01.png" alt="Employee Performance Dashboard Overview" loading="lazy">
+              </div>
+              <div class="mini-slide">
+                <img src="portfolio/power_bi_project01.1.png" alt="Employee Performance Dashboard Age Breakdown" loading="lazy">
+              </div>
+            </div>
+
+            <div class="mini-slider-controls">
+              <div class="mini-slider-dots"></div>
+              <div class="mini-arrows">
+                <button class="mini-arrow-btn mini-prev" aria-label="Previous view">&larr;</button>
+                <button class="mini-arrow-btn mini-next" aria-label="Next view">&rarr;</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="analytics-card-body">
+            <div>
+              <h3 class="analytics-card-title">Employee Performance Dashboard</h3>
+              <p class="analytics-card-desc">
+                Analyzed order data across 10 employees to surface top performers, order distribution by age group, and comprehensive performance comparisons.
+              </p>
+            </div>
+            <div style="margin-top: 16px;">
+              <span class="tech-tag">Power BI</span>
+              <span class="tech-tag">Power Query</span>
+              <span class="tech-tag">DAX Measures</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Power BI Card 2: Sales & Profitability Dashboard (3 Screenshots) -->
+        <div class="analytics-card fade-up">
+          <div class="mini-slider-wrapper" data-mini-slider data-zoom="portfolio/power_bi_project02.1.png" data-caption="Sales & Profitability Executive Dashboard ($13M+ Sales)">
+            <div class="mini-slider-track">
+              <div class="mini-slide">
+                <img src="portfolio/power_bi_project02.1.png" alt="Sales & Profitability Executive Overview" loading="lazy">
+              </div>
+              <div class="mini-slide">
+                <img src="portfolio/power_bi_project02.2.png" alt="Sales YoY Growth and Customer Analysis" loading="lazy">
+              </div>
+              <div class="mini-slide">
+                <img src="portfolio/power_bi_project02.3.png" alt="Product Category Matrix & Shipping Logistics" loading="lazy">
+              </div>
+            </div>
+
+            <div class="mini-slider-controls">
+              <div class="mini-slider-dots"></div>
+              <div class="mini-arrows">
+                <button class="mini-arrow-btn mini-prev" aria-label="Previous view">&larr;</button>
+                <button class="mini-arrow-btn mini-next" aria-label="Next view">&rarr;</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="analytics-card-body">
+            <div>
+              <h3 class="analytics-card-title">Sales &amp; Profitability Dashboard</h3>
+              <p class="analytics-card-desc">
+                6-page executive dashboard covering $13M+ in sales, profit YoY, top customers, product categories, shipping, and quarterly sales trends.
+              </p>
+            </div>
+            <div style="margin-top: 16px;">
+              <span class="tech-tag">Power BI</span>
+              <span class="tech-tag">6-Page Suite</span>
+              <span class="tech-tag">Financial KPIs</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       5. EMAIL CAMPAIGNS (NEWSLETTER DISTRIBUTION)
+       ======================================================================== -->
+  <section class="section" id="email">
+    <div class="container">
+      
+      <div class="section-header fade-up">
+        <span class="eyebrow">Editorial &amp; Email Marketing</span>
+        <h2 class="section-title">Email Campaigns</h2>
+        <p class="section-desc">
+          Official monthly email publications crafted for the Future Marketers Association, driving student engagement and digital newsletter distribution.
+        </p>
+      </div>
+
+      <!-- Email Showcase Card with Slider -->
+      <div class="newsletter-showcase-card fade-up">
+        
+        <div class="fma-tenure-banner">
+          <div class="fma-tenure-title">
+            Sub-Editor, Future Marketers Association (FMA) &bull; <span class="text-muted">May 2026 &ndash; Present</span>
+          </div>
+          <span class="tag-pill" style="display: inline-flex; padding: 4px 12px; font-size: 12px; font-weight: 600; color: var(--gold-dark); border: 1px solid var(--gold-border); border-radius: var(--radius-full);">Official Editorial Role</span>
+        </div>
+
+        <div class="newsletter-slider-container">
+          <div class="newsletter-track" id="emailTrack">
+            
+            <!-- Slide 1: April 2026 -->
+            <div class="newsletter-slide">
+              <div class="newsletter-slide-inner">
+                <div class="newsletter-media" data-zoom="portfolio/email_april_2026.png" data-caption="Impact Marketer Newsletter - April 2026 Email Campaign">
+                  <img src="portfolio/email_april_2026.png" alt="Impact Marketer April 2026 Email Campaign" class="newsletter-cover-img" loading="lazy">
+                </div>
+                <div class="newsletter-content">
+                  <div class="newsletter-edition-badge">Edition 01 &bull; April 2026</div>
+                  <h3>April 2026 Email Campaign</h3>
+                  <p>Curated and formatted the inaugural publication broadcast, establishing responsive layout structures and high-engagement newsletter design.</p>
+                  <a href="https://drive.google.com/file/d/1s6wQ6bmBskJ2xTBz5syfIogHfJJFPIZH/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="btn btn-gold btn-sm">
+                    View Full Email (PDF) &nearr;
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 2: July 2026 -->
+            <div class="newsletter-slide">
+              <div class="newsletter-slide-inner">
+                <div class="newsletter-media" data-zoom="portfolio/email_july_2026.png" data-caption="Impact Marketer Newsletter - July 2026 Email Campaign">
+                  <img src="portfolio/email_july_2026.png" alt="Impact Marketer July 2026 Email Campaign" class="newsletter-cover-img" loading="lazy">
+                </div>
+                <div class="newsletter-content">
+                  <div class="newsletter-edition-badge">Edition 02 &bull; July 2026</div>
+                  <h3>July 2026 Email Campaign</h3>
+                  <p>Designed and delivered the July edition email blast featuring generative AI trends, student spotlights, and optimized call-to-action click rates.</p>
+                  <a href="https://drive.google.com/file/d/1QgvwLNaMNlgbdwxbg034KaIKqXH-Mi_2/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="btn btn-gold btn-sm">
+                    View Full Email (PDF) &nearr;
+                  </a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Email Carousel Bottom Nav -->
+        <div class="carousel-bottom-nav">
+          <div class="carousel-dots" id="emailDots"></div>
+          <div class="carousel-arrows">
+            <button class="carousel-arrow-btn" id="emailPrev" aria-label="Previous email campaign">&larr;</button>
+            <button class="carousel-arrow-btn" id="emailNext" aria-label="Next email campaign">&rarr;</button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       6. LINKEDIN COVERS (EDITORIAL VISUAL IDENTITY)
+       ======================================================================== -->
+  <section class="section-alt" id="linkedin">
+    <div class="container">
+      
+      <div class="section-header fade-up">
+        <span class="eyebrow">Visual Branding &bull; FMA Publication</span>
+        <h2 class="section-title">LinkedIn Covers</h2>
+        <p class="section-desc">
+          Bespoke visual identity and social banners designed for official distribution across professional networks.
+        </p>
+      </div>
+
+      <!-- LinkedIn Showcase Card with Slider -->
+      <div class="newsletter-showcase-card fade-up">
+        
+        <div class="newsletter-slider-container">
+          <div class="newsletter-track" id="linkedinTrack">
+            
+            <!-- Slide 1: April 2026 Edition -->
+            <div class="newsletter-slide">
+              <div class="newsletter-slide-inner">
+                <div class="newsletter-media" data-zoom="portfolio/linkedin_cover_april_2026.png" data-caption="Impact Marketer Newsletter - LinkedIn Cover Graphic (April 2026 Edition)">
+                  <img src="portfolio/linkedin_cover_april_2026.png" alt="Impact Marketer April 2026 Cover Graphic" class="newsletter-cover-img" loading="lazy">
+                </div>
+                <div class="newsletter-content">
+                  <div class="newsletter-edition-badge">Edition 01 &bull; April 2026</div>
+                  <h3>April 2026 LinkedIn Cover Graphic</h3>
+                  <p>Crafted the foundational publication brand identity cover emphasizing omnichannel marketing, conversion rate optimization, and consumer data analytics.</p>
+                  <button class="btn btn-silver btn-sm" data-zoom="portfolio/linkedin_cover_april_2026.png">
+                    Expand Cover Graphic &nearr;
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 2: July 2026 Edition -->
+            <div class="newsletter-slide">
+              <div class="newsletter-slide-inner">
+                <div class="newsletter-media" data-zoom="portfolio/linkedin cover image (1).png" data-caption="Impact Marketer Newsletter - LinkedIn Cover Graphic (July 2026 Edition)">
+                  <img src="portfolio/linkedin cover image (1).png" alt="Impact Marketer July 2026 Cover Graphic" class="newsletter-cover-img" loading="lazy">
+                </div>
+                <div class="newsletter-content">
+                  <div class="newsletter-edition-badge">Edition 02 &bull; July 2026</div>
+                  <h3>July 2026 LinkedIn Cover Graphic</h3>
+                  <p>Designed the flagship LinkedIn cover asset focusing on generative AI, performance marketing, and digital customer acquisition strategies.</p>
+                  <button class="btn btn-silver btn-sm" data-zoom="portfolio/linkedin cover image (1).png">
+                    Expand Cover Graphic &nearr;
+                  </button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- LinkedIn Carousel Bottom Nav -->
+        <div class="carousel-bottom-nav">
+          <div class="carousel-dots" id="linkedinDots"></div>
+          <div class="carousel-arrows">
+            <button class="carousel-arrow-btn" id="linkedinPrev" aria-label="Previous LinkedIn cover">&larr;</button>
+            <button class="carousel-arrow-btn" id="linkedinNext" aria-label="Next LinkedIn cover">&rarr;</button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       7. BRAND CAMPAIGNS & MULTIMEDIA (SIRASA FM ACTIVATION)
+       ======================================================================== -->
+  <section class="section" id="campaigns">
+    <div class="container">
+      
+      <div class="section-header fade-up">
+        <span class="eyebrow">Campaigns &amp; Multimedia</span>
+        <h2 class="section-title">Sirasa FM Brand Activation</h2>
+        <p class="section-desc">
+          High-engagement synthetic media and digital advertising created for mobile app growth.
+        </p>
+      </div>
+
+      <div class="campaign-card fade-up">
+        <div class="campaign-grid">
+          
+          <div class="campaign-video-wrapper" data-zoom="portfolio/Sirasa_ai_video.png" data-caption="Sirasa FM App Download Campaign - 15-Second AI Video Ad">
+            <img src="portfolio/Sirasa_ai_video.png" alt="Sirasa FM AI Video Ad Thumbnail" loading="lazy">
+            <a href="https://drive.google.com/file/d/1mm8hFy0pIZ6M7u_Om39wficZwlaChP5j/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="video-play-overlay" aria-label="Play AI Video on Google Drive">
+              <div class="play-circle">&#9658;</div>
+            </a>
+          </div>
+
+          <div class="campaign-body">
+            <span class="tag-pill" style="margin-bottom: 12px;">AI Video Production</span>
+            <h3>15-Second AI-Generated Video Ad</h3>
+            <p>
+              Conceptual promotional advertisement tailored for Sirasa FM's digital app download campaign, integrating dynamic scripting, synthetic voiceover, and rapid visual pacing.
+            </p>
+            <a href="https://drive.google.com/file/d/1mm8hFy0pIZ6M7u_Om39wficZwlaChP5j/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn btn-gold btn-sm">
+              Watch on Google Drive &nearr;
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       8. INDUSTRY CERTIFICATIONS (FULL-IMAGE CARDS)
+       ======================================================================== -->
+  <section class="section-alt" id="certifications">
+    <div class="container">
+      
+      <div class="section-header fade-up">
+        <span class="eyebrow">Credentials</span>
+        <h2 class="section-title">Industry Certifications</h2>
+        <p class="section-desc">
+          Professional certifications validating domain expertise in analytics, search advertising, and conversion rate optimization.
+        </p>
+      </div>
+
+      <div class="certifications-grid">
+        
+        <!-- Cert 1: Google Analytics -->
+        <div class="cert-card fade-up">
+          <div class="cert-img-box" data-zoom="https://api.accredible.com/v1/frontend/credential_website_embed_image/certificate/180272673" data-caption="Google Analytics Certification - Google Skillshop">
+            <img src="https://api.accredible.com/v1/frontend/credential_website_embed_image/certificate/180272673" alt="Google Analytics Certification" class="cert-img" loading="lazy">
+          </div>
+          <div class="cert-body">
+            <div>
+              <div class="cert-issuer-label">Google Skillshop</div>
+              <h3 class="cert-title">Google Analytics Certification</h3>
+              <div class="cert-validity">Issued Apr 20, 2026 &bull; Valid until Apr 20, 2027</div>
+            </div>
+            <div class="cert-footer">
+              <a href="https://www.credential.net/31428ce6-3e2d-4575-849b-1110dd212f4f" target="_blank" rel="noopener noreferrer" class="cert-verify-link">
+                Verify Credential &rarr;
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cert 2: Google Ads -->
+        <div class="cert-card fade-up">
+          <div class="cert-img-box" data-zoom="https://api.accredible.com/v1/frontend/credential_website_embed_image/certificate/183619268" data-caption="Google Ads Search Certification - Google Skillshop">
+            <img src="https://api.accredible.com/v1/frontend/credential_website_embed_image/certificate/183619268" alt="Google Ads Search Certification" class="cert-img" loading="lazy">
+          </div>
+          <div class="cert-body">
+            <div>
+              <div class="cert-issuer-label">Google Skillshop</div>
+              <h3 class="cert-title">Google Ads Search Certification</h3>
+              <div class="cert-validity">Issued May 27, 2026 &bull; Valid until May 27, 2027</div>
+            </div>
+            <div class="cert-footer">
+              <a href="https://www.credential.net/450c4177-6fcc-4add-98d7-cbd2c2a69a2a" target="_blank" rel="noopener noreferrer" class="cert-verify-link">
+                Verify Credential &rarr;
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cert 3: Conversion Optimization -->
+        <div class="cert-card fade-up">
+          <div class="cert-img-box" data-zoom="https://api.accredible.com/v1/frontend/credential_website_embed_image/certificate/183662423" data-caption="Conversion Optimization Certification - Google Skillshop">
+            <img src="https://api.accredible.com/v1/frontend/credential_website_embed_image/certificate/183662423" alt="Conversion Optimization Certification" class="cert-img" loading="lazy">
+          </div>
+          <div class="cert-body">
+            <div>
+              <div class="cert-issuer-label">Google Skillshop</div>
+              <h3 class="cert-title">Conversion Optimization Certification</h3>
+              <div class="cert-validity">Issued May 27, 2026 &bull; Valid until May 27, 2027</div>
+            </div>
+            <div class="cert-footer">
+              <a href="https://www.credential.net/f47de4b2-d007-4303-adb6-d6dff959fe61" target="_blank" rel="noopener noreferrer" class="cert-verify-link">
+                Verify Credential &rarr;
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cert 4: Digital Marketing -->
+        <div class="cert-card fade-up">
+          <div class="cert-img-box" style="background-color: var(--bg-surface);">
+            <div style="width: 56px; height: 56px; border-radius: 8px; background: var(--gold-subtle); display: flex; align-items: center; justify-content: center; font-size: 26px; color: var(--gold-dark); font-weight: 700; border: 1px solid var(--gold-border);">
+              G
+            </div>
+          </div>
+          <div class="cert-body">
+            <div>
+              <div class="cert-issuer-label">Google Digital Garage</div>
+              <h3 class="cert-title">Fundamentals of Digital Marketing</h3>
+              <div class="cert-validity">Verified on LinkedIn Profile</div>
+            </div>
+            <div class="cert-footer">
+              <a href="https://www.linkedin.com/in/kulitha-hansaja-1a69a0203" target="_blank" rel="noopener noreferrer" class="cert-verify-link">
+                Verify on LinkedIn &rarr;
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cert 5: AI-Powered Performance Ads -->
+        <div class="cert-card fade-up">
+          <div class="cert-img-box" data-zoom="https://api.accredible.com/v1/frontend/credential_website_embed_image/certificate/183643342" data-caption="AI-Powered Performance Ads Certification - Google Skillshop">
+            <img src="https://api.accredible.com/v1/frontend/credential_website_embed_image/certificate/183643342" alt="AI-Powered Performance Ads Certification" class="cert-img" loading="lazy">
+          </div>
+          <div class="cert-body">
+            <div>
+              <div class="cert-issuer-label">Google Skillshop</div>
+              <h3 class="cert-title">AI-Powered Performance Ads Certification</h3>
+              <div class="cert-validity">Issued May 27, 2026 &bull; Valid until May 27, 2027</div>
+            </div>
+            <div class="cert-footer">
+              <a href="https://www.credential.net/1f1c55ea-d4f3-42a9-8b78-e4482aa76516" target="_blank" rel="noopener noreferrer" class="cert-verify-link">
+                Verify Credential &rarr;
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       9. AWARDS & RECOGNITION (PRESTIGIOUS GOLD & SILVER SHOWCASE)
+       ======================================================================== -->
+  <section class="section" id="awards">
+    <div class="container">
+      
+      <div class="section-header fade-up">
+        <span class="eyebrow">Honors &amp; Accolades</span>
+        <h2 class="section-title">Awards &amp; Recognition</h2>
+      </div>
+
+      <div class="award-feature-card fade-up">
+        <div class="award-trophy-badge">🏆</div>
+        <div class="award-content">
+          <span class="award-prestige-tag">★ 1st Place / Competition Winner</span>
+          <h3 class="award-title">Most Popular Advertisement Award</h3>
+          <div class="award-event">Razzmatazz Advertising Competition</div>
+          <div class="award-institution">University of Sabaragamuwa, Sri Lanka</div>
+          <p style="font-size: 13px; color: var(--text-secondary); margin-top: 6px;">
+            Recognized for outstanding creative direction, storytelling, and audience engagement in competitive campaign evaluation.
+          </p>
+        </div>
+
+        <!-- Award Image Slider (2 Images: Razmatzzz1 & Razmatazz2) -->
+        <div class="award-slider-box">
+          <div class="mini-slider-wrapper" data-mini-slider data-zoom="portfolio/Razmatzzz1.jpg" data-caption="Razzmatazz Advertising Competition - Award Ceremony & Trophy Presentation">
+            <div class="mini-slider-track">
+              <div class="mini-slide">
+                <img src="portfolio/Razmatzzz1.jpg" alt="Razzmatazz Most Popular Advertisement Award Ceremony & Trophy Presentation" loading="lazy">
+              </div>
+              <div class="mini-slide">
+                <img src="portfolio/Razmatazz2.jpeg" alt="Razzmatazz Most Popular Advertisement Award Certificate" loading="lazy">
+              </div>
+            </div>
+
+            <div class="mini-slider-controls">
+              <div class="mini-slider-dots"></div>
+              <div class="mini-arrows">
+                <button class="mini-arrow-btn mini-prev" aria-label="Previous award image">&larr;</button>
+                <button class="mini-arrow-btn mini-next" aria-label="Next award image">&rarr;</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Verified Google Skillshop Badges Showcase -->
+      <div class="award-badges-showcase fade-up">
+        <h3 class="award-badges-title">Official Verified Digital Badges</h3>
+        <div class="award-badges-grid">
+          <a href="https://www.credential.net/450c4177-6fcc-4add-98d7-cbd2c2a69a2a" target="_blank" rel="noopener noreferrer" class="award-badge-item" title="Verify Google Ads Search Certification">
+            <img src="https://api.accredible.com/v1/frontend/credential_website_embed_image/badge/183619268" alt="Google Ads Search Badge" loading="lazy">
+            <span class="award-badge-name">Google Ads Search</span>
+            <span class="award-badge-verify">Verify &rarr;</span>
+          </a>
+          <a href="https://www.credential.net/31428ce6-3e2d-4575-849b-1110dd212f4f" target="_blank" rel="noopener noreferrer" class="award-badge-item" title="Verify Google Analytics Certification">
+            <img src="https://api.accredible.com/v1/frontend/credential_website_embed_image/badge/180272673" alt="Google Analytics Badge" loading="lazy">
+            <span class="award-badge-name">Google Analytics</span>
+            <span class="award-badge-verify">Verify &rarr;</span>
+          </a>
+          <a href="https://www.credential.net/1f1c55ea-d4f3-42a9-8b78-e4482aa76516" target="_blank" rel="noopener noreferrer" class="award-badge-item" title="Verify AI-Powered Performance Ads Certification">
+            <img src="https://api.accredible.com/v1/frontend/credential_website_embed_image/badge/183643342" alt="AI-Powered Performance Ads Badge" loading="lazy">
+            <span class="award-badge-name">AI-Powered Ads</span>
+            <span class="award-badge-verify">Verify &rarr;</span>
+          </a>
+          <a href="https://www.credential.net/f47de4b2-d007-4303-adb6-d6dff959fe61" target="_blank" rel="noopener noreferrer" class="award-badge-item" title="Verify Conversion Optimization Certification">
+            <img src="https://api.accredible.com/v1/frontend/credential_website_embed_image/badge/183662423" alt="Conversion Optimization Badge" loading="lazy">
+            <span class="award-badge-name">Conversion Optimization</span>
+            <span class="award-badge-verify">Verify &rarr;</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       10. FOOTER
+       ======================================================================== -->
+  <footer class="footer" id="contact">
+    <div class="container footer-inner">
+      
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h3>Kulitha Hansaja</h3>
+          <p>
+            Marketing Undergraduate &bull; Growth, SEO, Power BI Analytics &amp; Web Development.
+          </p>
+        </div>
+
+        <ul class="footer-contact-items">
+          <li>Email: <a href="mailto:Kulithahansaja123@gmail.com">Kulithahansaja123@gmail.com</a></li>
+          <li>Phone: <a href="tel:+94711502081">(+94) 71 150 2081</a></li>
+          <li>Location: Gampaha, Sri Lanka</li>
+          <li>LinkedIn: <a href="https://www.linkedin.com/in/kulitha-hansaja-1a69a0203" target="_blank" rel="noopener noreferrer">linkedin.com/in/kulitha-hansaja-1a69a0203 &nearr;</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Kulitha Hansaja. All rights reserved.</div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       LIGHTBOX MODAL
+       ======================================================================== -->
+  <div class="lightbox-modal" id="lightboxModal" role="dialog" aria-modal="true" aria-label="Image Preview">
+    <div class="lightbox-content">
+      <span class="lightbox-close" id="lightboxClose">&times;</span>
+      <img src="" alt="" class="lightbox-img" id="lightboxImg">
+      <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+  </div>
+
+  <!-- Custom Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>
